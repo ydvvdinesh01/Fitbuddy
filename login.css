@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(45deg, #000000, #5f767d);
+  }
+  
+  /* Login Container */
+  .login-container {
+    width: 400px;
+    padding: 40px;
+    background-image: linear-gradient(45deg, #000000, #5f767d);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(243, 241, 241, 0.918);
+    background: url("");
+}
+
+/* Login Form */
+.login-form h2 {
+    text-align: center;
+    
+    color: white;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    font-size: 1.1em;
+    color: white;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .input-group input:focus {
+    border-color: #00c6ff;
+  }
+  
+  /* CAPTCHA Group */
+  .captcha-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .captcha {
+    display: flex;
+    align-items: center;
+  }
+  
+  .captcha-text {
+    font-size: 1.2em;
+    margin-right: 10px;
+    background-color: #e1f5fe;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Login Button */
+.login-btn {
+    text-align: center;
+    
+    width: 100%;
+    padding: 10px;
+    background: url("./fitness.jpg");
+    
+    background-color: #4caf50;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #388e3c;
+    background: url("./fitness.jpg");
+  }
+  
+  /* Links */
+  .links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .links a {
+    color: #00c6ff;
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .links a:hover {
+    color: #0083b0;
+  }
+  
+  /* Create Account Button */
+  .create-account {
+    font-weight: 600;
+  }

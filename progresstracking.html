@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Progress Tracking - Fitness Motivation App</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+      background-color: #f0f4f8;
+      padding: 20px;
+    }
+
+    .progress-tracking-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    .progress-section {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+    }
+
+    .progress-section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      color: #2d2d2d;
+    }
+
+    .progress-icon {
+      font-size: 2.5rem;
+      color: #4caf50;
+      margin-right: 20px;
+    }
+
+    .progress-content {
+      flex-grow: 1;
+    }
+
+    .progress-bar-container {
+      background-color: #e0e0e0;
+      border-radius: 25px;
+      overflow: hidden;
+      height: 25px;
+      margin-bottom: 10px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      transition: width 0.5s ease-in-out;
+      border-radius: 25px;
+    }
+
+    .progress-percentage {
+      text-align: right;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Specific colors for different progress bars */
+    .progress-bar.workout {
+      background-color: #ff6f61;
+    }
+
+    .progress-bar.weight-loss {
+      background-color: #fbc02d;
+    }
+
+    .progress-bar.steps {
+      background-color: #42a5f5;
+    }
+
+    /* Button for updating the progress */
+    .update-progress-btn {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-top: 20px;
+      display: block;
+      width: 100%;
+      text-align: center;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .update-progress-btn:hover {
+      background-color: #45a049;
+    }
+    
+    .progress-section-logo {
+      font-size: 2.5rem;
+      color: #4caf50;
+      margin-right: 20px;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .progress-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .progress-icon {
+        margin-bottom: 15px;
+      }
+      
+      .progress-section-logo {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="progress-tracking-container">
+    <h1>Track Your Progress</h1>
+
+    <!-- Workout Progress -->
+    <div class="progress-section">
+      <i class="fas fa-dumbbell progress-icon"></i>
+      <div class="progress-content">
+        <h2>Workout Completion</h2>
+        <div class="progress-bar-container">
+          <div class="progress-bar workout" id="workout-progress-bar" style="width: 70%;"></div>
+        </div>
+        <p class="progress-percentage" id="workout-progress-text">70% Complete</p>
+      </div>
+    </div>
+
+    <!-- Weight Loss Progress -->
+    <div class="progress-section">
+      <i class="fas fa-weight progress-icon"></i>
+      <div class="progress-content">
+        <h2>Weight Loss Goals</h2>
+        <div class="progress-bar-container">
+          <div class="progress-bar weight-loss" id="weight-loss-progress-bar" style="width: 40%;"></div>
+        </div>
+        <p class="progress-percentage" id="weight-loss-progress-text">40% Complete</p>
+      </div>
+    </div>
+
+    <!-- Step Count Progress -->
+    <div class="progress-section">
+      <i class="fas fa-shoe-prints progress-icon"></i>
+      <div class="progress-content">
+        <h2>Step Count Progress</h2>
+        <div class="progress-bar-container">
+          <div class="progress-bar steps" id="steps-progress-bar" style="width: 85%;"></div>
+        </div>
+        <p class="progress-percentage" id="steps-progress-text">85% of your daily goal</p>
+      </div>
+    </div>
+
+    <button class="update-progress-btn" onclick="updateProgress()">Update Progress</button>
+  </div>
+
+  <script>
+    // Function to simulate updating progress
+    function updateProgress() {
+      // Simulate new progress values (In real app, this would come from backend or user input)
+      let workoutProgress = Math.floor(Math.random() * 100);
+      let weightLossProgress = Math.floor(Math.random() * 100);
+      let stepsProgress = Math.floor(Math.random() * 100);
+
+      // Update workout progress
+      document.getElementById('workout-progress-bar').style.width = workoutProgress + '%';
+      document.getElementById('workout-progress-text').innerText = workoutProgress + '% Complete';
+
+      // Update weight loss progress
+      document.getElementById('weight-loss-progress-bar').style.width = weightLossProgress + '%';
+      document.getElementById('weight-loss-progress-text').innerText = weightLossProgress + '% Complete';
+
+      // Update step count progress
+      document.getElementById('steps-progress-bar').style.width = stepsProgress + '%';
+      document.getElementById('steps-progress-text').innerText = stepsProgress + '% of your daily goal';
+    }
+  </script>
+
+</body>
+</html>

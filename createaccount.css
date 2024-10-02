@@ -1,0 +1,106 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(45deg, #000000, #5f767d);
+  }
+  
+  /* Account Container */
+  .account-container {
+    width: 400px;
+    padding: 40px;
+    background-image: linear-gradient(45deg, #000000, #5f767d);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Account Form */
+  .account-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    font-size: 1.1em;
+    color: #555;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .input-group input:focus {
+    border-color: #00c6ff;
+  }
+  
+  /* Checkbox */
+  .input-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+  }
+  
+  .input-group label a {
+    color: #00c6ff;
+    text-decoration: none;
+  }
+  
+  .input-group label a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Create Account Button */
+  .create-account-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .create-account-btn:hover {
+    background-color: #388e3c;
+  }
+  
+  /* Links */
+  .links {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .links a {
+    color: #00c6ff;
+    font-size: 0.9em;
+    text-decoration: none;
+  }
+  
+  .links a:hover {
+    color: #0083b0;
+  }
+  

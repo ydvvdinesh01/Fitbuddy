@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Workout Variety - Fitness Motivation App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f7f9fc;
+            color: #333;
+            padding: 20px;
+        }
+
+        .workout-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 40px;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 5px;
+            background: #6fcf97;
+            margin: 20px auto 0;
+            z-index: -1;
+            box-shadow: 0 0 10px rgba(111, 207, 151, 0.5);
+        }
+
+        .workout-section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            position: relative;
+            opacity: 0; /* Start hidden */
+            animation: fadeInUp 1s forwards; /* Apply animation */
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .workout-card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            position: relative;
+            z-index: 1;
+            opacity: 0; /* Start hidden */
+            animation: fadeIn 0.5s forwards; /* Apply animation to cards */
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .workout-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid #6fcf97;
+            z-index: 2;
+        }
+
+        .workout-card i {
+            font-size: 60px;
+            color: #6fcf97;
+            margin-bottom: 15px;
+            transition: color 0.3s;
+        }
+
+        .workout-card:hover i {
+            color: #56b882;
+        }
+
+        .workout-card h3 {
+            font-size: 1.5rem;
+            color: #2d2d2d;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .workout-card p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .start-btn {
+            background-color: #6fcf97;
+            color: white;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.2s;
+            position: relative;
+            z-index: 3;
+        }
+
+        .start-btn:hover {
+            background-color: #56b882;
+            transform: scale(1.05);
+        }
+
+        /* Background Circles for Creative Effect */
+        .background-circle {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 0;
+            opacity: 0.1;
+        }
+
+        .circle-1 {
+            width: 300px;
+            height: 300px;
+            background: rgba(232, 244, 4, 0.4);
+            top: -100px;
+            left: -100px;
+            animation: float 4s infinite ease-in-out;
+        }
+
+        .circle-2 {
+            width: 200px;
+            height: 200px;
+            background: rgba(111, 207, 151, 0.2);
+            bottom: -100px;
+            right: -100px;
+            animation: float 5s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .workout-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .workout-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="workout-container">
+    <h1>Explore Your Workout Variety</h1>
+    
+    <!-- Background Circles -->
+    <div class="background-circle circle-1"></div>
+    <div class="background-circle circle-2"></div>
+
+    <div class="workout-section">
+        <!-- Strength Training -->
+        <div class="workout-card">
+            <i class="fas fa-dumbbell"></i>
+            <h3>Strength Training</h3>
+            <p>Build muscle and increase strength with effective resistance-based workouts using weights or body weight.</p>
+            <a href="#" class="start-btn">Start Workout</a>
+        </div>
+
+        <!-- Cardio Workouts -->
+        <div class="workout-card">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Cardio Workouts</h3>
+            <p>Boost your endurance and burn calories with a variety of cardiovascular exercises such as running, cycling, and more.</p>
+            <a href="#" class="start-btn">Start Workout</a>
+        </div>
+
+        <!-- Flexibility & Stretching -->
+        <div class="workout-card">
+            <i class="fas fa-child"></i>
+            <h3>Flexibility & Stretching</h3>
+            <p>Improve flexibility and prevent injury with stretching routines designed to increase range of motion and mobility.</p>
+            <a href="#" class="start-btn">Start Workout</a>
+        </div>
+
+        <!-- HIIT (High-Intensity Interval Training) -->
+        <div class="workout-card">
+            <i class="fas fa-stopwatch"></i>
+            <h3>HIIT</h3>
+            <p>Push your limits with high-intensity interval training, combining short bursts of intense exercise followed by recovery periods.</p>
+            <a href="#" class="start-btn">Start Workout</a>
+        </div>
+
+        <!-- Yoga & Mindfulness -->
+        <div class="workout-card">
+            <i class="fas fa-spa"></i>
+            <h3>Yoga & Mindfulness</h3>
+            <p>Enhance your mental and physical well-being with yoga sessions focused on balance, mindfulness, and relaxation.</p>
+            <a href="#" class="start-btn">Start Workout</a>
+        </div>
+
+        <!-- Functional Training -->
+        <div class="workout-card">
+            <i class="fas fa-running"></i>
+            <h3>Functional Training</h3>
+            <p>Improve your everyday movement with functional exercises that enhance coordination, balance, and flexibility.</p>
+            <a href="#" class="start-btn">Start Workout</a>
+        </div>
+    </div>
+</div>
+<script src="./fetchapijs.js"></script>
+</html>

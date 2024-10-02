@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Create New Account - Fitness Motivation App</title>
+  <link rel="stylesheet" href="createaccount.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Create Account Section -->
+  <div class="account-container">
+    <div class="account-form">
+      <h2>Create New Account</h2>
+      <form action="#" method="POST">
+        <!-- Name Field -->
+        <div class="input-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+
+        <!-- Mobile Number Field -->
+        <div class="input-group">
+          <label for="mobile">Mobile Number</label>
+          <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+        </div>
+
+        <!-- Email Field -->
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <!-- Password Field -->
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Create a password" required>
+        </div>
+
+        <!-- Confirm Password Field -->
+        <div class="input-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+        </div>
+
+        <!-- Terms and Conditions -->
+        <div class="input-group">
+          <input type="checkbox" id="terms" name="terms" required>
+          <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+        </div>
+
+        <!-- Create Account Button -->
+        <button type="submit" class="create-account-btn">Create Account</button>
+
+        <!-- Already have an account? -->
+        <div class="links">
+          <a href="login.html">Already have an account? Login here</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

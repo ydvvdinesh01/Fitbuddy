@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rewards - Fitness Motivation App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f7f9fc;
+            color: #333;
+            padding: 20px;
+        }
+
+        .rewards-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        /* User Status Bar */
+        .status-bar {
+            background: linear-gradient(90deg, #6fcf97, #36a2eb);
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+            margin-bottom: 40px;
+            font-size: 1.2rem;
+            position: relative;
+        }
+
+        .status-bar span {
+            font-weight: bold;
+        }
+
+        .points {
+            margin-top: 10px;
+            font-size: 1.5rem;
+            color: #ffe600;
+        }
+
+        .rewards-section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .reward-card {
+            background-color: #6fcf97;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 30px;
+            color: white;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .reward-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .reward-card i {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .reward-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .reward-card p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .claim-btn {
+            background-color: #ffffff;
+            color: #6fcf97;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .claim-btn:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .reward-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="rewards-container">
+    <h1>Your Rewards</h1>
+    
+    <!-- User Status Bar -->
+    <div class="status-bar">
+        <div>Your Current Points: <span>250</span></div>
+        <div class="points">Points to Next Reward: 50</div>
+    </div>
+    
+    <div class="rewards-section">
+        <!-- Reward 1 -->
+        <div class="reward-card">
+            <i class="fas fa-gift"></i>
+            <h3>5% Discount on Membership</h3>
+            <p>Claim this reward to get a 5% discount on your next membership renewal.</p>
+            <button class="claim-btn">Claim Now</button>
+        </div>
+
+        <!-- Reward 2 -->
+        <div class="reward-card">
+            <i class="fas fa-utensils"></i>
+            <h3>Free Nutritional Consultation</h3>
+            <p>Get a free nutritional consultation with our experts. Claim this reward today!</p>
+            <button class="claim-btn">Claim Now</button>
+        </div>
+
+        <!-- Reward 3 -->
+        <div class="reward-card">
+            <i class="fas fa-dumbbell"></i>
+            <h3>Free Workout Gear</h3>
+            <p>Claim a voucher for free workout gear from our partner store.</p>
+            <button class="claim-btn">Claim Now</button>
+        </div>
+
+        <!-- Reward 4 -->
+        <div class="reward-card">
+            <i class="fas fa-bolt"></i>
+            <h3>Exclusive Fitness Challenges</h3>
+            <p>Join our exclusive fitness challenges and win exciting prizes!</p>
+            <button class="claim-btn">Claim Now</button>
+        </div>
+
+        <!-- Reward 5 -->
+        <div class="reward-card">
+            <i class="fas fa-user-friends"></i>
+            <h3>Group Training Session</h3>
+            <p>Enjoy a free group training session with a certified trainer.</p>
+            <button class="claim-btn">Claim Now</button>
+        </div>
+
+        <!-- Reward 6 -->
+        <div class="reward-card">
+            <i class="fas fa-smile"></i>
+            <h3>Special Member Events</h3>
+            <p>Exclusive access to member-only events and workshops.</p>
+            <button class="claim-btn">Claim Now</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

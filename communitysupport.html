@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Community Support - Fitness Motivation App</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f0f4f8;
+      padding: 20px;
+    }
+
+    .community-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .support-section {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .support-card {
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      width: 30%;
+      margin-bottom: 20px;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .support-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .support-card .emoji {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .support-card h3 {
+      font-size: 1.4rem;
+      color: #2d2d2d;
+      margin-bottom: 10px;
+    }
+
+    .support-card p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .join-btn {
+      background-color: #ff6f61;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .join-btn:hover {
+      background-color: #e65a4f;
+    }
+
+    /* Testimonials Section */
+    .testimonial-section {
+      background-color: #f0f4f8;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .testimonial .emoji {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .testimonial p {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .testimonial span {
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .support-section {
+        flex-direction: column;
+      }
+
+      .support-card {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="community-container">
+    <h1>Community Support</h1>
+
+    <!-- Support Features -->
+    <div class="support-section">
+      <!-- Forums -->
+      <div class="support-card">
+        <div class="emoji">💬</div>
+        <h3>Join Forums</h3>
+        <p>Connect with fellow fitness enthusiasts in our active forums. Share tips, ask questions, and get advice.</p>
+        <a href="#" class="join-btn">Join Now</a>
+      </div>
+
+      <!-- Live Chat -->
+      <div class="support-card">
+        <div class="emoji">💻</div>
+        <h3>Live Chat</h3>
+        <p>Need instant help or motivation? Chat live with coaches and community members anytime!</p>
+        <a href="#" class="join-btn">Start Chatting</a>
+      </div>
+
+      <!-- Success Stories -->
+      <div class="support-card">
+        <div class="emoji">🏆</div>
+        <h3>Success Stories</h3>
+        <p>Read real-life success stories from users who achieved their fitness goals. Get inspired by their journeys.</p>
+        <a href="#" class="join-btn">Read Stories</a>
+      </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="testimonial-section">
+      <h2>What Our Community Members Say</h2>
+
+      <!-- Testimonial 1 -->
+      <div class="testimonial">
+        <div class="emoji">😊</div>
+        <p>"This app and the community have transformed my life. I am in the best shape ever thanks to the support!"</p>
+        <span>- Sarah Johnson</span>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial">
+        <div class="emoji">💪</div>
+        <p>"Whenever I needed motivation, the community was there for me. The live chat with trainers is a game-changer!"</p>
+        <span>- Mark Richards</span>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial">
+        <div class="emoji">🤩</div>
+        <p>"The forums are filled with experienced users. I got great tips on nutrition and fitness routines."</p>
+        <span>- Emily Davis</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

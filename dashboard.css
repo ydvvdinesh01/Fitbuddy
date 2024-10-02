@@ -1,0 +1,154 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Dashboard Container */
+  .dashboard-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar h2 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #4caf50;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+  }
+  
+  .sidebar ul li {
+    margin: 20px 0;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+  }
+  
+  .sidebar ul li a i {
+    margin-right: 15px;
+  }
+  
+  .sidebar ul li a:hover {
+    text-decoration: underline;
+    font-weight: 600;
+    color: #4caf50;
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #ffffff;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dashboard-header {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 2.4em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .dashboard-header p {
+    font-size: 1.2em;
+    color: #555;
+  }
+  
+  /* Section Container */
+  .section-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  /* Section Cards */
+  .section-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: 280px;
+    text-align: center;
+    transition: 0.3s;
+  }
+  
+  .section-card:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .section-card h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: #4caf50;
+  }
+  
+  .section-card p {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 15px;
+  }
+  
+  .section-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: #4caf50;
+  }
+  
+  /* Rewards Section Details */
+  .rewards-details {
+    margin-top: 15px;
+  }
+  
+  .claim-rewards-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .claim-rewards-btn:hover {
+    background-color: #388e3c;
+  }
+  

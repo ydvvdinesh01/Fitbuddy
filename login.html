@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Login - Fitness Motivation App</title>
+  <link rel="stylesheet" href="login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Login Section -->
+  <div class="login-container">
+    <div class="login-form">
+      <h2>Login to Fitbuddy</h2>
+      <form action="#" method="POST">
+        <!-- Mobile/Email Field -->
+        <div class="input-group">
+          <label for="mobile-email">Mobile No. or Email</label>
+          <input type="text" id="mobile-email" name="mobile-email"  required placeholder="Enter your mobile no. or email" required 
+          pattern=">
+        </div>
+
+        <!-- Password Field -->
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required placeholder="Enter your password" pattern="">
+        </div>
+
+        <!-- CAPTCHA Field -->
+        <div class="input-group captcha-group">
+          <label for="captcha">Enter CAPTCHA</label>
+          <div class="captcha">
+            <span class="captcha-text">7 + 3 = ?</span> <!-- Placeholder for CAPTCHA logic -->
+            <input type="text" id="captcha" name="captcha" required placeholder="Enter the result"  >
+          </div>
+        </div>
+
+        <!-- Login Button -->
+        <a href="dashboard.html" class="login-btn">Next</a></button>
+
+        <!-- Forgot Password and Create Account Links -->
+        <div class="links">
+          <a href="#">Forgot Password?</a>
+          <a href="createaccount.html" class="create-account">Create New Account</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>

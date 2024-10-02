@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Dashboard - Fitness Motivation App</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <!-- Dashboard Container -->
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Fitness App</h2>
+      <ul>
+        <li><a href="#"><i class="fas fa-home"></i> Our Features</a></li>
+        <li><a href="#"><i class="fas fa-heart"></i> Daily Motivation</a></li>
+        <li><a href="#"><i class="fas fa-chart-line"></i> Progress Tracking</a></li>
+        <li><a href="#"><i class="fas fa-users"></i> Community Support</a></li>
+        <li><a href="#"><i class="fas fa-utensils"></i> Nutritional Guidance</a></li>
+        <li><a href="#"><i class="fas fa-dumbbell"></i> Workout Variety</a></li>
+        <li><a href="#"><i class="fas fa-gift"></i> Rewards</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Dashboard Header -->
+      <div class="dashboard-header">
+        <h1>Welcome Back, Fitness Enthusiast!</h1>
+        <p>Your health is your wealth—let's make every day count.</p>
+      </div>
+
+      <!-- Dashboard Sections -->
+      <div class="section-container">
+        <!-- Daily Motivation Section -->
+        <a href="http://127.0.0.1:5500/dailymotivation.html" class="section-card" id="daily-motivation">
+          <i class="fas fa-heartbeat section-icon"></i>
+          <h3>Daily Motivation</h3>
+          <p>Get inspired every day with motivational content tailored to keep you moving toward your goals.</p>
+        </a>
+
+        <!-- Progress Tracking Section -->
+        <a href="http://127.0.0.1:5500/progresstracking.html" class="section-card" id="progress-tracking">
+          <i class="fas fa-chart-line section-icon"></i>
+          <h3>Progress Tracking</h3>
+          <p>Track your performance and milestones with our easy-to-use progress tracker. Stay accountable and see your improvement!</p>
+        </a>
+
+        <!-- Community Support Section -->
+        <a href="http://127.0.0.1:5500/communitysupport.html" class="section-card" id="community-support">
+          <i class="fas fa-users section-icon"></i>
+          <h3>Community Support</h3>
+          <p>Join our active community and stay motivated by sharing your journey and learning from others.</p>
+        </a>
+
+        <!-- Nutritional Guidance Section -->
+        <a href="http://127.0.0.1:5500/nutritionalguidance.html" class="section-card" id="nutritional-guidance">
+          <i class="fas fa-utensils section-icon"></i>
+          <h3>Nutritional Guidance</h3>
+          <p>Access meal plans and nutritional tips to support your fitness goals and optimize your diet.</p>
+        </a>
+
+        <!-- Workout Variety Section -->
+        <a href="http://127.0.0.1:5500/workoutvariety.html" class="section-card" id="workout-variety">
+          <i class="fas fa-dumbbell section-icon"></i>
+          <h3>Workout Variety</h3>
+          <p>Explore diverse workouts—from strength training to yoga. Whatever your goal, we've got the perfect routine for you.</p>
+        </a>
+
+        <!-- Rewards Section -->
+        <a href="http://127.0.0.1:5500/rewards.html" class="section-card" id="rewards">
+          <i class="fas fa-gift section-icon"></i>
+          <h3>Rewards Earned</h3>
+          <p>You’ve earned <strong>5 rewards</strong> this month! Claim them to unlock special discounts and offers.</p>
+          <div class="rewards-details">
+            <p><strong>Rewards Claimed:</strong> 3</p>
+            <button class="claim-rewards-btn">Claim New Rewards</button>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

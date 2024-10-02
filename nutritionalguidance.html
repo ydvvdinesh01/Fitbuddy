@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Nutritional Guidance - Fitness Motivation App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      padding: 20px;
+    }
+
+    .nutrition-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .nutrition-section {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .nutrition-card {
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      width: 30%;
+      margin-bottom: 20px;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .nutrition-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .nutrition-card .emoji {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .nutrition-card h3 {
+      font-size: 1.4rem;
+      color: #2d2d2d;
+      margin-bottom: 10px;
+    }
+
+    .nutrition-card p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .read-more-btn {
+      background-color: #6fcf97;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .read-more-btn:hover {
+      background-color: #56b882;
+    }
+
+    /* Meal Plan Section */
+    .meal-plan-section {
+      background-color: #f0f4f8;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
+    }
+
+    .meal-plan {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .meal-plan .emoji {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .meal-plan h3 {
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .meal-plan p {
+      font-size: 1.1rem;
+      color: #777;
+    }
+
+    .meal-plan-details {
+      margin-top: 10px;
+    }
+
+    .meal-plan-details span {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Calorie Counter */
+    .calorie-counter {
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .calorie-counter h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .calorie-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .calorie-form label {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .calorie-form input {
+      padding: 10px;
+      width: 80%;
+      margin-bottom: 20px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .calorie-form button {
+      background-color: #6fcf97;
+      color: white;
+      padding: 10px 30px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .calorie-form button:hover {
+      background-color: #56b882;
+    }
+
+    .calorie-result {
+      text-align: center;
+      font-size: 1.4rem;
+      color: #333;
+      margin-top: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nutrition-section {
+        flex-direction: column;
+      }
+
+      .nutrition-card {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .calorie-form input {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nutrition-container">
+    <h1>Nutritional Guidance</h1>
+
+    <!-- Nutritional Features -->
+    <div class="nutrition-section">
+      <!-- Meal Plans -->
+      <div class="nutrition-card">
+        <div class="emoji">🥗</div>
+        <h3>Meal Plans</h3>
+        <p>Get custom meal plans based on your fitness goals—whether it's muscle gain, fat loss, or overall health.</p>
+        <a href="#" class="read-more-btn">View Plans</a>
+      </div>
+
+      <!-- Healthy Recipes -->
+      <div class="nutrition-card">
+        <div class="emoji">🍽️</div>
+        <h3>Healthy Recipes</h3>
+        <p>Discover delicious, healthy recipes curated by top nutritionists to support your fitness journey.</p>
+        <a href="#" class="read-more-btn">Explore Recipes</a>
+      </div>
+
+      <!-- Nutrition Tips -->
+      <div class="nutrition-card">
+        <div class="emoji">🍎</div>
+        <h3>Nutrition Tips</h3>
+        <p>Stay informed with the latest nutrition tips and advice to keep your diet on track and balanced.</p>
+        <a href="#" class="read-more-btn">Get Tips</a>
+      </div>
+    </div>
+
+    <!-- Meal Plan Section -->
+    <div class="meal-plan-section">
+      <h2>Today's Recommended Meal Plan</h2>
+
+      <!-- Meal Plan -->
+      <div class="meal-plan">
+        <div class="emoji">🥙</div>
+        <h3>Balanced Diet Plan</h3>
+        <p>A well-balanced diet with a mix of proteins, carbs, and healthy fats to keep you energized throughout the day.</p>
+        <div class="meal-plan-details">
+          <span>🌅 Breakfast: Oats with Berries and Almonds</span><br>
+          <span>🍱 Lunch: Grilled Chicken Salad with Quinoa</span><br>
+          <span>🍲 Dinner: Stir-fried Vegetables with Brown Rice</span><br>
+          <span>🍌 Snacks: Greek Yogurt with a Banana</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calorie Counter Section -->
+    <div class="calorie-counter">
+      <h2>Track Your Daily Calories</h2>
+      <form class="calorie-form">
+        <label for="breakfast">Breakfast Calories:</label>
+        <input type="number" id="breakfast" placeholder="Enter calories for breakfast">
+        
+        <label for="lunch">Lunch Calories:</label>
+        <input type="number" id="lunch" placeholder="Enter calories for lunch">
+
+        <label for="dinner">Dinner Calories:</label>
+        <input type="number" id="dinner" placeholder="Enter calories for dinner">
+
+        <label for="snacks">Snacks Calories:</label>
+        <input type="number" id="snacks" placeholder="Enter calories for snacks">
+
+        <button type="button" onclick="calculateCalories()">Calculate Total Calories</button>
+      </form>
+
+      <div class="calorie-result" id="calorieResult"></div>
+    </div>
+  </div>
+
+  <script>
+    function calculateCalories() {
+      const breakfast = parseInt(document.getElementById('breakfast').value) || 0;
+      const lunch = parseInt(document.getElementById('lunch').value) || 0;
+      const dinner = parseInt(document.getElementById('dinner').value) || 0;
+      const snacks = parseInt(document.getElementById('snacks').value) || 0;
+
+      const totalCalories = breakfast + lunch + dinner + snacks;
+      document.getElementById('calorieResult').innerHTML = `Total Calories: ${totalCalories} kcal`;
+    }
+  </script>
+
+</body>
+</html>
